@@ -11,10 +11,10 @@ import java.util.stream.Stream;
 @SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class}) // Not API: /error
 public class Application {
     public static void main(String[] args) {
-        System.out.println("tes");
+        /*System.out.println("tes");
         Fraction fraction = new Fraction();
         Stream<User> stream = fraction.isProperFraction(1);
-        System.out.println(stream.count());
-        //SpringApplication.run(Application.class, args);// mvnw clean spring-boot:run
+        System.out.println(stream.count());*/
+        SpringApplication.run(Application.class, args);// mvnw clean spring-boot:run
     }
 }

@@ -30,7 +30,7 @@ public class SearchesTest {
     }
 
     void testFindUserIdByAnyProperFraction() {
-        assertEquals()
+        //assertEquals()
     }
 
     void testFindUserNameByAnyImproperFraction() {

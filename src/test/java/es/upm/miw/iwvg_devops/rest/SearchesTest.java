@@ -2,6 +2,7 @@ package es.upm.miw.iwvg_devops.rest;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import es.upm.miw.iwvg_devops.EjerciciosStream.Searches;
 
-public class SearchesTest {
+class SearchesTest {
 
     @Test
     void testFindUserFamilyNameByUserNameDistinct() {
@@ -29,8 +30,16 @@ public class SearchesTest {
                 .collect(Collectors.toList()));
     }
 
+    @Test
+    void testFindUserFamilyNameInitialByAnyProperFraction() {
+        assertEquals(List.of("Fernandez", "Blanco", "López", "Blanco"), new Searches()
+                .findUserFamilyNameInitialByAnyProperFraction().collect(Collectors.toList()));
+    }
+
+    @Test
     void testFindUserIdByAnyProperFraction() {
-        //assertEquals()
+        assertEquals(List.of(1, 2, 3, 5).toString(),
+                new Searches().findUserIdByAnyProperFraction().collect(Collectors.toList()).toString());
     }
 
     void testFindUserNameByAnyImproperFraction() {
